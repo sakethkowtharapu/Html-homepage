@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>login page</title>
+        <style>
+           
+       #container{
+       top: 50%;
+       left: 50%;
+       position: absolute;
+       transform: translate(-50%,-50%);
+       color:rgb(0, 0, 0);
+       
+      
+    
+ }
+      .formbox h2{
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+   margin-top: 5px;
+   
+ }
+ .inputgroup input{
+    /* margin: 10px; */
+    width: 100%;
+    margin-bottom: 15px;  
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px
+ }
+
+ 
+ 
+ .btn{
+    display: inline;
+    margin: 40px;
+   
+ }
+ button{
+         background-color: rgba(0, 110, 255, 0.936);
+         color: white;
+         /* height: 40px; */
+         border: none;
+         padding: 10px;
+         font-size: 15px;
+         font-weight: bold;
+        border-radius: 8px;
+        padding: 20px;
+        transition: opacity 1s;
+        transition: box-shadow 1s;
+      
+        
+ }
+ button:hover{
+    opacity: 0.8;
+    box-shadow: 5px 10px 30px gray;
+ }
+ button:active{
+    opacity: 0.5;
+ }
+
+ 
+ 
+        </style>
+    </head>
+    <body>
+        <div id="container">
+
+        <div class="formbox">
+            <h2 id="title">Sign up</h2>
+            <form>
+                <div class="form">
+                <div class="inputgroup">
+     <input type="text" placeholder="enter uername" id="nameinput"/>
+     <br />
+     </div>
+     <div class="inputgroup">
+     <input type="email" placeholder="enter email" id="mail"/><br />
+       </div>
+       <div class="inputgroup">
+        <input type="password" placeholder="enter password"  id="password"/><br />
+          </div>
+       <div class="btn">
+     <button type="button"  id="signup"  name="signup">Sign up</button>
+    </div>
+    <div class="btn">
+     <button type="button"  id="login"   name="login">Login</button>
+    </div>
+            </form>
+            </div>
+        </div>
+
+        <script>
+           let name=document.getElementById("nameinput");
+           let password=document.getElementById("password");
+           let gmail=document.getElementById("mail");
+    login.onclick=function()
+    {
+        let x=name.value;
+        let y=password.value;
+        let z=gmail.value;
+
+        if(x=="ispatial" && z=="ist@gmail.com" && y=="1234")
+          window.location.href="Home_Page.html";
+
+    else{
+        return alert("invalid credentials");
+    }
+    }
+
+        </script>
+    </body>
+</html>
