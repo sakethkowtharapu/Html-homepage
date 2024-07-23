@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 100%;
+            /* height: 100vh; */
+            /* background-image:url(./career_img-01.png);*/
+            background-size: cover;
+            background-attachment: fixed;
+            /* background-position: center; */
+        }
+
+        .navbar {
+            height: 70px;
+            width: 100%;
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .navbar ul li {
+            /* margin-top: 0%;
+                display: inline; */
+            display: flex;
+            float: right;
+            list-style: none;
+            text-align: center;
+            /* padding-right: 20px; */
+
+
+        }
+
+        ul li a {
+            text-decoration: none;
+            margin: 20px;
+
+        }
+
+        .logo {
+            margin-top: -10px;
+            /* display: inline;
+                 position: absolute;
+                 height: 20px;
+                 padding-left: 20px; */
+            /* margin: 0 !important; */
+
+
+        }
+
+        .overview {
+
+
+            line-height: 1.5;
+
+        }
+
+        .overview h3 {
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: solid;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .content {
+            padding: 15px 40px;
+        }
+
+        .background {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            box-shadow: -50px 30px 25px rgb(176, 172, 172), 0px -10px 80px rgb(255, 255, 255);
+
+        }
+
+        .background img {
+            /* margin-top: 30px; */
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .parent {
+            width: 100%;
+            height: 300px;
+            display: grid;
+            /* grid-template-columns: 100px 100px 100px 100px; */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            /* grid-template-rows: 300px 300px 300px 300px;  */
+            text-align: center;
+
+        }
+
+        .child1,
+        .child2,
+        .child3,
+        .child4 {
+            border: solid 1px rgb(230, 230, 230);
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 10px 20px 30px gray;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin: 10px;
+            border: none;
+            height: 40px;
+            width: 150px;
+            background-color: rgb(45, 45, 184);
+            color: white;
+            font-weight: bold;
+            box-shadow: 10px 10px 20px gray;
+            border-radius: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .btn:hover {
+            opacity: 0.7;
+        }
+
+        .btn:active {
+            opacity: 0.4;
+        }
+
+        .fa-shopping-cart {
+            margin-top: 25px;
+
+        }
+
+        .products {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .icon-circle {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: rgb(45, 45, 184);
+            ;
+            color: white;
+        }
+
+        .icon-circle:hover {
+            opacity: 0.6;
+        }
+
+        .icon-circle:active {
+            opacity: 0.3;
+        }
+
+        .icon-circle {
+            display: none;
+        }
+
+        #count {
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <p class="logo">I SPATIAL</p>
+            <div style="display: flex;">
+                <ul>
+                    <li><a href="Login_page.html" target="_blank">LOGIN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="Home_Page.html">HOME</a></li>
+                </ul>
+                <i class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+        <div class="background">
+            <img src="./360_F_445749168_e461cOBPmQKpJ3cSwLfGGooYXXR8gC5V.jpg" alt="sample">
+        </div>
+        <div class="overview">
+            <h3>OVER VIEW</h3>
+            <P class="content">iSpatial Techno Solutions provides smart solutions that automates the enterprise business
+                process into
+                a results-oriented solution that streamlines operations involving integration and communication between
+                multiple business and IT environments. Our core competency lies in building a scalable Geo-enabled Rapid
+                Solution development
+                platform using Esri, Artificial Intelligence and Microsoft technologies that deliver high quality
+                solutions with optimized cost.
+                We offer solutions to various industry domains such as Smart Cities, Government Sectors, Oil & Gas,
+                Utilities,
+                Transportation, Property Development, Environmental verticals utilizing latest cutting edge
+                technologies.</P>
+        </div>
+        <div>
+            <h2 class="products">PRODUCTS</h2>
+            <div class="parent">
+                <div class="child1"><img src="./istockphoto-178716575-612x612.jpg" width="200px" height="200px"
+                        alt="electronics" />
+                    <p>ELECTRONICS</p>
+                    <p>price 10000 &#36;</p>
+                    <div>
+                        <div class="icon-circle" id="icon" onclick="cart()">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <button class="btn" type="button" onclick="addtocart()" id="button">ADD TO CART</button>
+                        <button class="btn" id="count" type="button"></button>
+                        <div class="icon-circle" id="icon1" onclick="cart_1()">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="child2"><img src="./istockphoto-178716575-612x612.jpg" width="200px" height="200px"
+                        alt="electronics" />
+                    <p>MOBILES</p>
+                    <p>price 100000 &#36;</p>
+                    <div>
+                        <div class="icon-circle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <button class="btn" type="button" onclick="addtocart()">ADD TO CART</button>
+                        <div class="icon-circle" id="icon">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="child3"><img src="./istockphoto-178716575-612x612.jpg" width="200px" height="200px"
+                        alt="electronics" />
+                    <p>FASHION</p>
+                    <P>price 10000 &#36;</P>
+                    <div>
+                        <div class="icon-circle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <button class="btn" type="button">ADD TO CART</button>
+                        <div class="icon-circle">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="child4"><img src="./istockphoto-178716575-612x612.jpg" width="200px" height="200px"
+                        alt="electronics" />
+                    <p>GROCERY</p>
+                    <p>price 1000 &#36;</p>
+                    <div>
+                        <div class="icon-circle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <button class="btn" type="button">ADD TO CART</button>
+                        <div class="icon-circle">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- <link rel="stylesheet"
+                    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+            </div>
+        </div>
+        <footer class="text-center text-lg-start text-muted" style="margin-top: 7%; background-color: black;">
+            <!-- <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                
+                  <div>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </div>
+                </section>
+               -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <div class="row mt-3" style="padding-top: 10%;">
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                <i class="fas fa-gem me-3"></i>Company name
+                            </h6>
+                            <p>
+                                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                        </div>
+
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Products
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Angular</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">React</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Vue</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Laravel</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">
+                                Useful links
+                            </h6>
+                            <p>
+                                <a href="#!" class="text-reset">Pricing</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Settings</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Orders</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Help</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                info@example.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+                            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+        </footer>
+    </div>
+    <script>
+
+        var button = document.getElementById("button");
+        var countData = document.getElementById("count");
+        var icon = document.getElementById("icon");
+        var icon1 = document.getElementById("icon1");
+        var count =0;
+
+        function addtocart() {
+            count ++
+            button.style.display = "none";
+            countData.style.display = "inline";
+            countData.innerHTML = count;
+            icon.style.display = "inline-block";
+            icon1.style.display = "inline-block";
+        }
+
+        function cart() {
+            // countData.style.display = "block";
+            count++
+            countData.innerHTML = count
+        }
+        function cart_1() {
+           if(count>0){
+           count--;
+            countData.innerHTML = count;
+           }
+            if (count <= 0) {
+                button.style.display = "inline-block";
+                countData.style.display = "none";
+                icon.style.display = "none";
+                icon1.style.display = "none";
+            }
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
